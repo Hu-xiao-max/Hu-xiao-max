@@ -28,6 +28,9 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+        env:
+          # 使用你刚才创建的高级密钥！
+          GITHUB_TOKEN: ${{ secrets.SNAKE_TOKEN }}
 
       # 将生成的图片推送到 output 分支
       - name: push github-contribution-grid-snake.svg to the output branch
